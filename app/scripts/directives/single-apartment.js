@@ -4,17 +4,7 @@ angular.module('zyringApp')
 			restrict: 'E',
 			templateUrl: 'views/partials/apartment.html',
 			scope: {
-				title: '@',
-				city: '@',
-				price: '@',
-				floorplan: '@',
-				features: '@',
-				street: '@', 
-				city: '@', 
-				region: '@',
-				zip: '@', 
-				contact: '@'
-				//apartment: '@'
+				article: '@'
 			}
 		}
 		
