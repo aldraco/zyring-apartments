@@ -1,0 +1,30 @@
+.apartment-listing {
+	padding: 30px;
+	display: inline-block;
+	
+
+}
+
+.apartment-listing-thumbnail {
+	box-sizing: border-box;
+	background-position: top;
+	background-size: cover;
+	background-position-y: -20px; 
+	background-repeat: no-repeat;
+	padding: 0;
+	height: 250px;
+	overflow: visible;
+	position: relative;
+	
+}
+.apartment-listing-panel > h1 {
+	word-wrap: break-word;
+	color: white;
+}
+
+.apartment-listing-description {
+	position: absolute;
+	background-position-y: top;
+	background-color: black;
+	color: white; 
+}

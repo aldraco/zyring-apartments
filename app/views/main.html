@@ -1,0 +1,15 @@
+<h1 style="text-align: left">Where do you want to live?</h1>
+<div class="panel well container">
+	<div class="row apartment-finder apartment-listing" ng-repeat="city in cities">
+		<div class="col-md-6 col-sm-12">
+			<a ng-href="#/cities/{{city.name}}">
+				<img ng-src="{{city.image}}" class="img-responsive">
+			</a>
+		</div>
+		<div class="col-md-6 col-sm-12 pull-right">
+			<h3>{{city.name}}</h3>
+			<p><span ng-bind="'{{city.ptext}}'"></span></p> <p>Click here to find apartments in {{city.name}}.</p>
+		</div>
+	</div>
+</div>
+
