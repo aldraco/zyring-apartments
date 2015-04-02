@@ -3,9 +3,6 @@ angular.module('zyringApp')
 		return {
 			restrict: 'E',
 			templateUrl: 'views/partials/apartment.html',
-			scope: {
-				article: '@'
-			}
+			replace: true
 		}
-		
 	}]);

@@ -1,19 +1,16 @@
-<div class="col-md-4 col-sm-6 col-xs-12 apartment-listing-thumbnail" style="background-image:url({{apartment.thumbnail}})">
-	<div class="container apartment-listing-panel col-md-12">
-		<h1>{{apartment.title}}</h1>
-		<h4>{{apartment.city}}</h4>
-		<strong>{{apartment.price}}</strong>
-
-	</div>
-		<div class="apartment-listing-description">
-			<strong>{{apartment.floorplan}}</strong>
-			<ul> Features
-				<li ng-repeat="feature in apartment.features">{{feature}}</li>
-			</ul>
-			<p>{{apartment.street}}<br>{{apartment.city}}, {{apartment.region}} {{apartment.zip}}</p>
-			<p>Contact: {{apartment.contact}}</p>
-
+<div class="apartment-listing-thumbnail container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+	<div>
+		<img ng-src="{{apartment.thumbnail}}" alt="{{apartment.title}}" class="apartment-listing-thumbnail"></img>
+		<div class="apartment-details">
+			<p><strong>{{apartment.floorplan}}</strong><br>
+			{{apartment.price}}<br>
+			Call {{apartment.contact}}</p>
 		</div>
-	
-
+	</div>
+	<div>
+		<h4>{{apartment.title}}</h4>
+		<p>{{apartment.street}} {{apartment.city}}<br>
+			{{apartment.city}}, {{apartment.region}} {{apartment.zip}}</p>
+	</div>
+	<div class="spacer"></div>
 </div>

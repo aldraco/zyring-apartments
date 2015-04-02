@@ -1,11 +1,6 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name zyringApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the zyringApp
  */
 angular.module('zyringApp')
 	.controller('ApartmentCtrl', ['$scope', '$routeParams', 'ApartmentDataFactory', 
@@ -16,6 +11,7 @@ angular.module('zyringApp')
 		  	ApartmentDataFactory.query({city_name: $scope.city}, function(apts) {
 		  		$scope.apartments = apts;
 		  	});
+		  	console.log("parent controller scope: "+$scope.$parent.currentPage);
 		  	
 	  	}
 	  ]);

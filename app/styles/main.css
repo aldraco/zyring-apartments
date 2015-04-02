@@ -1,30 +1,29 @@
 .apartment-listing {
 	padding: 30px;
+	display: block;
+}
+.apartment-listing-thumbail {
 	display: inline-block;
-	
-
-}
-
-.apartment-listing-thumbnail {
-	box-sizing: border-box;
-	background-position: top;
-	background-size: cover;
-	background-position-y: -20px; 
-	background-repeat: no-repeat;
-	padding: 0;
-	height: 250px;
-	overflow: visible;
+	margin-bottom: 20px;
+	height: 300px;
 	position: relative;
-	
-}
-.apartment-listing-panel > h1 {
-	word-wrap: break-word;
-	color: white;
 }
 
-.apartment-listing-description {
-	position: absolute;
-	background-position-y: top;
-	background-color: black;
-	color: white; 
+.spacer {
+	height: 30px;
 }
+
+.apartment-details {
+	position: absolute;
+	background: #222;
+	color: white;
+	opacity: .7;
+	height: 60px;
+	width: 160px;
+	top: 125px;
+	line-height: 1.3em;
+	padding: 10px;
+	
+}
+// settings for adding bootstrap angular pagination
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
