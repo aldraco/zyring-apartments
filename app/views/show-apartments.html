@@ -1,10 +1,8 @@
 
 <div class="container">
 	<h1>{{city}}</h1>
-	<div>
-		<h2>{{currentPage}}</h2>
-	<single-apartment ng-repeat="apartment in apartments" apartment="apartment"></single-apartment>
+	<div masonry>
+	<single-apartment ng-repeat="apartment in apartments" apartment="apartment" class="masonry-brick"></single-apartment>
 	</div>
 </div>
-
 
