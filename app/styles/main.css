@@ -25,5 +25,8 @@
 	padding: 10px;
 	
 }
+.apartment-details a {
+	text-decoration: none;
+}
 // settings for adding bootstrap angular pagination
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

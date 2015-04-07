@@ -31,6 +31,10 @@ angular
         templateUrl: 'views/show-apartments.html',
         controller: 'ApartmentCtrl'
       })
+      .when('/apartments/:apartment_id', {
+        templateUrl: 'views/partials/single-apartment.html',
+        controller: 'SingleAptCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

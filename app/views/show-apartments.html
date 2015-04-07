@@ -1,8 +1,12 @@
 
 <div class="container">
 	<h1>{{city}}</h1>
-	<div masonry>
-	<single-apartment ng-repeat="apartment in apartments" apartment="apartment" class="masonry-brick"></single-apartment>
+	<div>
+		<pagination total-items="totalItems" ng-model="currentPage"></pagination>
 	</div>
+	<div masonry>
+	<single-apartment ng-repeat="apartment in apartments[currentPage]" apartment="apartment" class="masonry-brick"></single-apartment>
+	</div>
+
 </div>
 
