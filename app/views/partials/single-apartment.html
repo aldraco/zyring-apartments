@@ -1,32 +1,39 @@
-<div>
+<div class="panel well">
+	
 	<h1>{{aptInfo.title}}</h1>
-	<h3><a ng-href="">{{aptInfo.street}} {{aptInfo.city}} <br>{{aptInfo.region}} {{aptInfo.zipcode}}</a></h3>
-	<h4>Contact: {{aptInfo.contact}}</h4>
-	<h3>{{aptInfo.price}}</h3>	
-	<img ng-src="{{aptInfo.thumbnail}}">
-	<div ng-repeat="image in aptInfo.images">IMG</div>
 
+	<div class="single-view-panel col-md-6 col-sm-12">
+		<img ng-src="{{aptInfo.thumbnail}}" class="img-responsive col-md-12 thumbnail">
+		<div class="spacer"></div>
+		<h3>{{aptInfo.price}}</h3>	
+		
+	</div>
+
+	<h3><a ng-href="">{{aptInfo.street}} <br>{{aptInfo.city}} {{aptInfo.region}} {{aptInfo.zipcode}}</a></h3>
+
+	<h4>Contact: {{aptInfo.contact}}</h4>
+	<div class="container">
+		<p>{{aptInfo.description}}</p>	
+	</div>	
+
+	<h4>Features</h4>
 	<ul>
 		<li ng-repeat="feature in aptInfo.features">{{feature}}</li>
 	</ul>
 
-	<p>{{aptInfo.description}}</p>	
-
-	
+	<h4>Special Features</h4>
 	<ul>
 		<li ng-repeat="feature in aptInfo.specialFeatures">{{feature}}</li>
 	</ul>
 	
+	<h4>Community Features</h4>
 	<ul>
 		<li ng-repeat="commFeature in aptInfo.communityFeatures">{{commFeature}}</li>
 	</ul>
 	
 	
-	<ul>
-		<li ng-repeat="amenity in aptInfo.amenities">blah</li>
-	</ul>
+		<p ng-repeat="amenity in aptInfo.amenities">{{amenity}}</p>
 	
-	{{aptInfo.communityFeatures}}
 	{{aptInfo.amenities}}<br>
 	{{aptInfo.detailedFloorplans}}<br>
 

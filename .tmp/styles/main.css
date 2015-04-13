@@ -33,7 +33,15 @@ img.apartment-listing-thumbnail {
 .apartment-details a {
 	text-decoration: none;
 }
-// settings for adding bootstrap angular pagination
+
+.single-view-panel {
+	float: right;
+	margin-right: 0;
+	text-align: right;
+}
+
+
+/* settings for adding bootstrap angular pagination */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 @media (max-width: 768px) {
