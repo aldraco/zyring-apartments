@@ -9,6 +9,10 @@
 	position: relative;
 }
 
+img.apartment-listing-thumbnail {
+	width: 100%;
+}
+
 .spacer {
 	height: 30px;
 }
@@ -17,10 +21,11 @@
 	position: absolute;
 	background: #222;
 	color: white;
+	font-size: 18px;
 	opacity: .7;
-	height: 60px;
-	width: 160px;
-	top: 125px;
+	height: 25%;
+	width: 60%;
+	top: 40%;
 	line-height: 1.3em;
 	padding: 10px;
 	
@@ -30,3 +35,12 @@
 }
 // settings for adding bootstrap angular pagination
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+@media (max-width: 768px) {
+	.apartment-details {
+		top: 55%;
+		line-height: 1.6em;
+		font-size: 24px;
+		height: 20%;
+	}
+}

@@ -1,12 +1,12 @@
-<div class="apartment-listing-thumbnail container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+<div class="apartment-listing-thumbnail col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
 	<a href="#/apartments/{{apartment.id}}">
 	<div>
 		<img ng-src="{{apartment.thumbnail}}" alt="{{apartment.title}}" class="apartment-listing-thumbnail"></img>
-		<div class="apartment-details">
-			<p><strong>{{apartment.floorplan}}</strong><br>
-			{{apartment.price}}<br>
-			Call {{apartment.contact}}</p>
-		</div>
+	</div>
+	<div class="apartment-details">
+		<p><strong>{{apartment.floorplan}}</strong><br>
+		{{apartment.price}}<br>
+		Call {{apartment.contact}}</p>
 	</div>
 	<div>
 		<h4>{{apartment.title}}</h4>
