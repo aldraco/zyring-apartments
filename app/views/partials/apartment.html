@@ -1,4 +1,4 @@
-<div class="apartment-listing-thumbnail container col-lg-4 col-md-4 col-sm-6 col-xs-12">
+<div class="container ">
 	<a href="#/apartments/{{apartment.id}}">
 	<div>
 		<img ng-src="{{apartment.thumbnail}}" alt="{{apartment.title}}" class="apartment-listing-thumbnail"></img>
@@ -8,7 +8,7 @@
 			Call {{apartment.contact}}</p>
 		</div>
 	</div>
-	<div>
+	<div class="apartment-listing-info">
 		<h4>{{apartment.title}}</h4>
 		<p>{{apartment.street}} {{apartment.city}}<br>
 			{{apartment.city}}, {{apartment.region}} {{apartment.zip}}</p>

@@ -28,5 +28,24 @@
 .apartment-details a {
 	text-decoration: none;
 }
-// settings for adding bootstrap angular pagination
+/* settings for adding bootstrap angular pagination */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+@media (max-width: 768px) {
+	.apartment-listing-thumbnail {
+		float: left;
+		margin-right: 20px;
+	}
+
+	.apartment-listing-info {
+		float: right;
+		padding: 10px;
+	}
+
+	.apartment-details {
+		left: 225px;
+		background: #fff;
+		color: #444;
+		top: 75px;
+	}
+}
