@@ -16,6 +16,24 @@
 		<p>{{aptInfo.description}}</p>	
 	</div>	
 
+	<div>
+		<accordion close-others="oneAtATime">
+		    
+		    <accordion-group heading="Features" is-open="status.isFirstOpen">
+		      This content is straight in the template.
+		    </accordion-group>
+
+		    <accordion-group heading="Special Features" ng-repeat="feature in aptInfo.specialFeatures">
+		      {{feature}}
+		    </accordion-group>
+
+	  	</accordion>
+  	</div>
+
+
+
+
+
 	<h4>Features</h4>
 	<ul>
 		<li ng-repeat="feature in aptInfo.features">{{feature}}</li>
