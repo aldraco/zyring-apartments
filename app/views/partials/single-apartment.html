@@ -1,22 +1,34 @@
 <div>
-	<h1>Single Apartment Page</h1>
-	{{aptInfo.city}}
-	{{aptInfo.contact}}
-	{{aptInfo.features}}
-	{{aptInfo.latitude}}
-	{{aptInfo.longitude}}
-	{{aptInfo.price}}
-	{{aptInfo.region}}
-	{{aptInfo.street}}
-	{{aptInfo.thumbnail}}
-	{{aptInfo.title}}
-	{{aptInfo.zipcode}}
-	{{aptInfo.images}}
-	{{aptInfo.description}}
-	{{aptInfo.specialFeatures}}
+	<h1>{{aptInfo.title}}</h1>
+	<h3><a ng-href="">{{aptInfo.street}} {{aptInfo.city}} <br>{{aptInfo.region}} {{aptInfo.zipcode}}</a></h3>
+	<h4>Contact: {{aptInfo.contact}}</h4>
+	<h3>{{aptInfo.price}}</h3>	
+	<img ng-src="{{aptInfo.thumbnail}}">
+	<div ng-repeat="image in aptInfo.images">IMG</div>
+
+	<ul>
+		<li ng-repeat="feature in aptInfo.features">{{feature}}</li>
+	</ul>
+
+	<p>{{aptInfo.description}}</p>	
+
+	
+	<ul>
+		<li ng-repeat="feature in aptInfo.specialFeatures">{{feature}}</li>
+	</ul>
+	
+	<ul>
+		<li ng-repeat="commFeature in aptInfo.communityFeatures">{{commFeature}}</li>
+	</ul>
+	
+	
+	<ul>
+		<li ng-repeat="amenity in aptInfo.amenities">blah</li>
+	</ul>
+	
 	{{aptInfo.communityFeatures}}
-	{{aptInfo.amenities}}
-	{{aptInfo.detailedFloorplans}}
-	{{aptInfo.contact}}
+	{{aptInfo.amenities}}<br>
+	{{aptInfo.detailedFloorplans}}<br>
 
 </div>
+<small>{{aptInfo.latitude}}, {{aptInfo.longitude}}</small>
