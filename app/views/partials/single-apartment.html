@@ -16,23 +16,26 @@
 		<p>{{aptInfo.description}}</p>	
 	</div>	
 
-	<h4>Features</h4>
-	<ul>
-		<li ng-repeat="feature in aptInfo.features">{{feature}}</li>
-	</ul>
+	<h4 ng-click="showFeatures = (!showFeatures)">Features</h4>
+	<div ng-show="showFeatures">
+		<ul>
+			<li ng-repeat="feature in aptInfo.features">{{feature}}</li>
+		</ul>
+	</div>
 
-	<h4>Special Features</h4>
-	<ul>
+
+	<h4 ng-click="showSpecial = (!showSpecial)">Special Features</h4>
+	<ul ng-show="showSpecial">
 		<li ng-repeat="feature in aptInfo.specialFeatures">{{feature}}</li>
 	</ul>
 	
-	<h4>Community Features</h4>
-	<ul>
+	<h4 ng-click="showCommunity = (!showCommunity)">Community Features</h4>
+	<ul ng-show="showCommunity">
 		<li ng-repeat="commFeature in aptInfo.communityFeatures">{{commFeature}}</li>
 	</ul>
 
-	<h4>Amenities</h4>
-	<ul>
+	<h4 ng-click="showAmenities = (!showAmenities)">Amenities</h4>
+	<ul ng-show="showAmenities">
 		<li ng-repeat="amenity in aptInfo.amenities track by $index">{{amenity}}</li>
 	</ul>
 
