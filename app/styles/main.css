@@ -2,6 +2,9 @@
 	padding: 30px;
 	display: block;
 }
+
+.angular-google-map-container { height: 400px; }
+
 .apartment-listing-thumbail {
 	display: inline-block;
 	margin-bottom: 20px;

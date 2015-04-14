@@ -4,14 +4,17 @@
 /**
  */
 angular.module('zyringApp')
-	.controller('ApartmentCtrl', ['$scope', '$routeParams', 'ApartmentDataFactory', 
-		function ($scope, $routeParams, ApartmentDataFactory) {
+	.controller('ApartmentCtrl', ['$scope', '$routeParams', 'ApartmentDataFactory', 'uiGmapGoogleMapApi',
+		function ($scope, $routeParams, ApartmentDataFactory, uiGmapGoogleMapApi) {
 		  	$scope.city = $routeParams.city_name;
 		  	$scope.apartments = ["apartments", []];
 		  	$scope.currentPage = 1;
 		  	$scope.totalItems;
+		  	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 
-		  	ApartmentDataFactory.query({city_name: $scope.city}, function(apts) {
+		  	uiGmapGoogleMapApi.then(function(maps) {
+
+			  	ApartmentDataFactory.query({city_name: $scope.city}, function(apts) {
 		  		// iterate through apts and place into sliced arrays of a certain size.
 		  		$scope.totalItems = apts.length;
 		  		var tempPage = $scope.currentPage;
@@ -26,10 +29,6 @@ angular.module('zyringApp')
 		  			
 		  		});
 
-
-
-
-		  		//$scope.apartments = apts;
 		  	});
 
 		  	$scope.setPage = function (newPage) {
@@ -38,7 +37,8 @@ angular.module('zyringApp')
 
 		  	$scope.maxSize = 9;
 
-		  	
+		  	});
+
 	  	}
 	  ])
 	.controller('SingleAptCtrl', ['$scope', '$routeParams', 'SingleAptFactory', function($scope, $routeParams, $SingleAptFactory) {

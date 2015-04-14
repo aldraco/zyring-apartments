@@ -15,7 +15,8 @@ angular
     'ngRoute',
     'ngTouch',
     'ui.bootstrap',
-    'wu.masonry'
+    'wu.masonry',
+    'uiGmapgoogle-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -38,4 +39,11 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyCF8CgwebS-YN4orKoLdxZhznUUH88Pge0',
+        v: '3.17',
+        libraries: 'weather,geometry,visualization'
+    });
+});

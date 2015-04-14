@@ -1,6 +1,8 @@
 
 <div class="container">
 	<h1>{{city}}</h1>
+	<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+
 	<div>
 		<pagination total-items="totalItems" ng-model="currentPage"></pagination>
 	</div>
