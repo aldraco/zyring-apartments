@@ -3,7 +3,7 @@
 	<h1>{{aptInfo.title}}</h1>
 
 	<div class="single-view-panel col-md-6 col-sm-12">
-		<img ng-src="{{aptInfo.thumbnail}}" class="img-responsive col-md-12 thumbnail">
+		<img ng-src="{{aptInfo.thumbnail}}" class="img-responsive col-md-12 col-sm-12 col-xs-12 thumbnail">
 		<div class="spacer"></div>
 		<h3>{{aptInfo.price}}</h3>	
 		
@@ -12,27 +12,9 @@
 	<h3><a ng-href="">{{aptInfo.street}} <br>{{aptInfo.city}} {{aptInfo.region}} {{aptInfo.zipcode}}</a></h3>
 
 	<h4>Contact: {{aptInfo.contact}}</h4>
-	<div class="container">
+	<div class="">
 		<p>{{aptInfo.description}}</p>	
 	</div>	
-
-	<div>
-		<accordion close-others="oneAtATime">
-		    
-		    <accordion-group heading="Features" is-open="status.isFirstOpen">
-		      This content is straight in the template.
-		    </accordion-group>
-
-		    <accordion-group heading="Special Features" ng-repeat="feature in aptInfo.specialFeatures">
-		      {{feature}}
-		    </accordion-group>
-
-	  	</accordion>
-  	</div>
-
-
-
-
 
 	<h4>Features</h4>
 	<ul>
@@ -48,12 +30,15 @@
 	<ul>
 		<li ng-repeat="commFeature in aptInfo.communityFeatures">{{commFeature}}</li>
 	</ul>
+
+	<h4>Amenities</h4>
+	<ul>
+		<li ng-repeat="amenity in aptInfo.amenities track by $index">{{amenity}}</li>
+	</ul>
+
 	
 	
-		<p ng-repeat="amenity in aptInfo.amenities">{{amenity}}</p>
-	
-	{{aptInfo.amenities}}<br>
-	{{aptInfo.detailedFloorplans}}<br>
+	<span class="hidden">{{aptInfo.detailedFloorplans}}</span>
 
 </div>
 <small>{{aptInfo.latitude}}, {{aptInfo.longitude}}</small>

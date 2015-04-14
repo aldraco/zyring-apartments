@@ -25,8 +25,7 @@ angular.module('zyringApp')
 		  			}
 		  			
 		  		});
-		  		console.log("there are "+($scope.apartments.length)+" pages.");
-		  		console.log($scope.apartments[$scope.currentPage]);
+
 
 
 
@@ -47,6 +46,5 @@ angular.module('zyringApp')
 		$scope.aptInfo;
 		$SingleAptFactory.get({apartment_id: $scope.apartment_id}, function(apt) {
 			$scope.aptInfo = apt;
-			console.log(apt);
 		});
 	}]);

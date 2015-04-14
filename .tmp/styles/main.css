@@ -51,4 +51,8 @@ img.apartment-listing-thumbnail {
 		font-size: 24px;
 		height: 20%;
 	}
+
+	.single-view-panel {
+		float: none;
+	}
 }
