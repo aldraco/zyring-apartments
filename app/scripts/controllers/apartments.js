@@ -28,8 +28,15 @@ angular.module('zyringApp')
 		  				latitude: value.latitude,
 		  				longitude: value.longitude,
 		  				idKey: value.id,
-		  				title: value.title
+		  				title: value.title,
+		  				thumbnail: value.thumbnail,
+		  				price: value.price,
+		  				show: false
 		  			};
+
+		  			pin.onClick = function() {
+		  				pin.show = !pin.show;
+		  			}
 
 
 		  			if (index+1 <= (tempPage * $scope.maxSize)) {

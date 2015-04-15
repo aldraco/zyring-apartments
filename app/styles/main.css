@@ -43,6 +43,12 @@ img.apartment-listing-thumbnail {
 	text-align: right;
 }
 
+.pin-thumbnail {
+	max-height: 170px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
 
 /* settings for adding bootstrap angular pagination */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

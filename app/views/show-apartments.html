@@ -3,7 +3,12 @@
 	<h1>{{city}}</h1>
 	<ui-gmap-google-map center='map.center' zoom='map.zoom'>
 
-		<ui-gmap-markers models="markers[currentPage]" coords="'self'" idKey="'idKey'" icon="'icon'" doRebuildAll="'true'"></ui-gmap-markers>
+		<ui-gmap-markers models="markers[currentPage]" coords="'self'" idKey="'idKey'" icon="'icon'" doRebuildAll="'true'" click="'onClick'">
+			<ui-gmap-windows show="show">
+                <div ng-non-bindable><h2>{{title}}</h2><img src="{{thumbnail}}" class="pin-thumbnail"><h5>{{price}}</h5></div>
+            </ui-gmap-windows>
+
+		</ui-gmap-markers>
 	</ui-gmap-google-map>
 
 	<div>
