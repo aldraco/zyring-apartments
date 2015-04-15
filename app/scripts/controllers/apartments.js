@@ -7,10 +7,15 @@ angular.module('zyringApp')
 	.controller('ApartmentCtrl', ['$scope', '$routeParams', 'ApartmentDataFactory', 'uiGmapGoogleMapApi',
 		function ($scope, $routeParams, ApartmentDataFactory, uiGmapGoogleMapApi) {
 		  	$scope.city = $routeParams.city_name;
+
 		  	$scope.apartments = ["apartments", []];
+		  	$scope.markers = ["markers", []];
+
 		  	$scope.currentPage = 1;
 		  	$scope.totalItems;
-		  	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+		  	$scope.maxSize = 9;
+
+		  	$scope.map = { center: { latitude: 47.6, longitude: -122 }, zoom: 10 };
 
 		  	uiGmapGoogleMapApi.then(function(maps) {
 
@@ -19,28 +24,37 @@ angular.module('zyringApp')
 		  		$scope.totalItems = apts.length;
 		  		var tempPage = $scope.currentPage;
 		  		apts.forEach(function(value, index) {
+		  			var pin = {
+		  				latitude: value.latitude,
+		  				longitude: value.longitude,
+		  				idKey: value.id,
+		  				title: value.title
+		  			};
+
+
 		  			if (index+1 <= (tempPage * $scope.maxSize)) {
 		  				$scope.apartments[tempPage].push(value);
+		  				$scope.markers[tempPage].push(pin);
 		  			} else {
 		  				tempPage++;
 		  				$scope.apartments.push([]);
-		  				$scope.apartments[tempPage].push(value)
+		  				$scope.markers.push([]);
+
+		  				$scope.apartments[tempPage].push(value);
+		  				$scope.markers[tempPage].push(pin);
 		  			}
 		  			
 		  		});
 
 		  	});
 
-		  	$scope.setPage = function (newPage) {
-		  		$scope.currentPage = newPage;
-		  	};
+		  	console.log($scope.markers[2]);
+		  	console.log($scope.apartments);
+		  	
 
-		  	$scope.maxSize = 9;
+	  	});
 
-		  	});
-
-	  	}
-	  ])
+  	}])
 	.controller('SingleAptCtrl', ['$scope', '$routeParams', 'SingleAptFactory', function($scope, $routeParams, $SingleAptFactory) {
 		$scope.apartment_id = $routeParams.apartment_id;
 		$scope.aptInfo;

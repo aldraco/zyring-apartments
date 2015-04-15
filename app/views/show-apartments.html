@@ -1,7 +1,10 @@
 
 <div class="container">
 	<h1>{{city}}</h1>
-	<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+	<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+
+		<ui-gmap-markers models="markers[currentPage]" coords="'self'" idKey="'idKey'" icon="'icon'" doRebuildAll="'true'"></ui-gmap-markers>
+	</ui-gmap-google-map>
 
 	<div>
 		<pagination total-items="totalItems" ng-model="currentPage"></pagination>
