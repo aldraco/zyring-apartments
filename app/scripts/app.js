@@ -28,6 +28,10 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
+      })
       .when('/cities/:city_name', {
         templateUrl: 'views/show-apartments.html',
         controller: 'ApartmentCtrl'
