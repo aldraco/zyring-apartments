@@ -43,6 +43,10 @@ img.apartment-listing-thumbnail {
 	text-align: right;
 }
 
+.single-apartment {
+	min-height: 600px;
+}
+
 .pin-thumbnail {
 	max-height: 170px;
 	padding: 10px;

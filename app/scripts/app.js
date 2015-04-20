@@ -29,8 +29,7 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
+        templateUrl: 'views/contact.html'
       })
       .when('/cities/:city_name', {
         templateUrl: 'views/show-apartments.html',

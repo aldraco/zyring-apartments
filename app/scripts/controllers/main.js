@@ -16,5 +16,19 @@ angular.module('zyringApp')
     {name: 'Bellevue', image: 'http://media-cdn.tripadvisor.com/media/photo-s/01/d7/66/43/downtown-bellevue-skyline.jpg', ptext: 'Bellevue. Right next to Seattle, without being right in the middle of the city.'}
     ];
 
+    $scope.myInterval = 5000;
+	  var slides = $scope.slides = [];
+	  $scope.addSlide = function() {
+	    var newWidth = 600 + slides.length + 1;
+	    slides.push({
+	      image: 'http://placekitten.com/' + newWidth + '/300',
+	      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
+	        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
+	    });
+	  };
+	  for (var i=0; i<4; i++) {
+	    $scope.addSlide();
+	  }
+
 
   });
