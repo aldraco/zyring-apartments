@@ -55,8 +55,6 @@ angular.module('zyringApp')
 
 		  	});
 
-		  	console.log($scope.markers[2]);
-		  	console.log($scope.apartments);
 		  	
 
 	  	});

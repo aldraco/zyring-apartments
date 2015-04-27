@@ -69,3 +69,12 @@ img.apartment-listing-thumbnail {
 		float: none;
 	}
 }
+
+@media (max-width: 640px) {
+  .apartment-details {
+    height: 30%;
+    line-height: 1.4em;
+    width:75%;
+    top: 40%;
+  }
+}
