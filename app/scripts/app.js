@@ -36,7 +36,7 @@ angular
         controller: 'ApartmentCtrl'
       })
       .when('/apartments/:apartment_id', {
-        templateUrl: 'views/partials/single-apartment.html',
+        templateUrl: 'views/single-apartment.html',
         controller: 'SingleAptCtrl'
       })
       .otherwise({

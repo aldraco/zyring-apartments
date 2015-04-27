@@ -2,7 +2,7 @@ angular.module('zyringApp')
 	.directive('singleApartment', [function() {
 		return {
 			restrict: 'E',
-			templateUrl: 'views/partials/apartment.html',
+			templateUrl: 'views/templates/apartment.html',
 			replace: true
 		}
 	}]);
