@@ -1,7 +1,20 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+.behind-map {
+  background-color: #222;
+  position: absolute;
+  height:540px;
+  width:100%;
+  left: 0;
+  top: 50px;
+  color: white;
+}
 
+.behind-map p {
+  padding: 20px;
+  font-size: 1.4em;
+}
 
 .apartment-listing {
 	display: block;
@@ -23,6 +36,10 @@ body {
   left: 5%;
   bottom: 10%;
   display: inline-block;
+}
+
+div.apartment-tiles {
+  margin-top: 540px;
 }
 
 .angular-google-map-container { height: 400px; }
