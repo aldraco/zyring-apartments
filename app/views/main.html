@@ -1,28 +1,12 @@
-<div>
-  <!--<div style="height: 305px">
-    <carousel interval="myInterval">
-      <slide ng-repeat="slide in slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
-        <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
-          <p>{{slide.text}}</p>
-        </div>
-      </slide>
-    </carousel>
-  </div>
-</div>-->
-<h1 style="text-align: left">Where do you want to live?</h1>
-<div class="panel well container">
-	<div class="row apartment-finder apartment-listing" ng-repeat="city in cities">
-		<div class="col-md-6 col-sm-12">
+
+
+<div class="">
+  <div class="spacer"></div>
+	<div class="apartment-listing" ng-repeat="city in cities">
 			<a ng-href="#/cities/{{city.name}}">
 				<img ng-src="{{city.image}}" class="img-responsive">
 			</a>
-		</div>
-		<div class="col-md-6 col-sm-12 pull-right">
-			<h3>{{city.name}}</h3>
-			<p><span ng-bind="'{{city.ptext}}'"></span></p> <p>Click here to find apartments in {{city.name}}.</p>
-		</div>
+      <h1>{{city.name}}</h1>
 	</div>
 </div>
 

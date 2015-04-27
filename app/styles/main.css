@@ -1,6 +1,22 @@
 .apartment-listing {
-	padding: 30px;
 	display: block;
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.apartment-listing img {
+  width: 100%;
+}
+
+.apartment-listing h1 {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  font-size:10em;
+  left: 5%;
+  bottom: 10%;
+  display: inline-block;
 }
 
 .angular-google-map-container { height: 400px; }
@@ -68,6 +84,10 @@ img.apartment-listing-thumbnail {
 	.single-view-panel {
 		float: none;
 	}
+
+  .apartment-listing h1 {
+    font-size: 8em;
+  }
 }
 
 @media (max-width: 640px) {
@@ -76,5 +96,9 @@ img.apartment-listing-thumbnail {
     line-height: 1.4em;
     width:75%;
     top: 40%;
+  }
+
+  .apartment-listing h1 {
+    font-size: 6em;
   }
 }
