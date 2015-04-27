@@ -15,7 +15,7 @@ angular.module('zyringApp')
 		  	$scope.totalItems;
 		  	$scope.maxSize = 9;
 
-		  	$scope.map = { center: { latitude: 47.6, longitude: -122 }, zoom: 10 };
+		  	$scope.map = { center: { latitude: 47.6, longitude: -122 }, zoom: 9 };
 
 		  	uiGmapGoogleMapApi.then(function(maps) {
 

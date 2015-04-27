@@ -12,7 +12,7 @@
 	</ui-gmap-google-map>
 
 	<div>
-		<pagination total-items="totalItems" ng-model="currentPage"></pagination>
+		<pagination total-items="totalItems" ng-model="currentPage" max-size="5"></pagination>
 	</div>
 	<div masonry>
 		<single-apartment ng-repeat="apartment in apartments[currentPage]" apartment="apartment" class="masonry-brick col-lg-4 col-md-4 col-sm-6 col-xs-12">
