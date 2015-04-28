@@ -1,15 +1,21 @@
 body {
   font-family: 'Lato', sans-serif;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.navbar-inverse {
+  border-radius: 0;
+  color: white;
 }
 .behind-map {
-  background-color: #344;
+  background-color: #5A5A5A;
   position: absolute;
   height:540px;
   width:100%;
   left: 0;
   top: 50px;
   color: white;
-  box-shadow: 0 -5px 2px teal;
+  box-shadow: 0 2px 2px gray;
 }
 
 .behind-map p {
@@ -54,6 +60,7 @@ div.apartment-tiles {
 
 .apartment-listing-thumbnail h4 {
   font-size: 1.7em;
+  height: 2em;
 }
 
 img.apartment-listing-thumbnail {
@@ -100,6 +107,13 @@ img.apartment-listing-thumbnail {
 
 /* settings for adding bootstrap angular pagination */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+@media (max-width: 1200px) {
+  .apartment-details {
+    font-size: .9em;
+    width: 75%;
+  }
+}
 
 @media (max-width: 768px) {
 	.apartment-details {
