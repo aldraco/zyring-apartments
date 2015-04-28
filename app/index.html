@@ -21,33 +21,6 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <script src="util/socket.io-1.3.4.js"></script>
-    <script>
-    var socket = io('https://api.zyring.com');
-    var zyringUserID = 'a.l.drake';
-    socket.on('connect', function() {
-        // ask the server if we should show the toaster or not
-        socket.emit('isToasterVisible',{userID:zyringUserID});
-
-        socket.on('toasterState', function (data) {
-            if (data.toasterVisibility === true) {
-                console.log('show the damn toaster');
-                document.getElementById('zyringToaster').style.visibility = "visible";
-            }
-        });
-
-    });
-
-    function dismissToaster() {
-        socket.emit('toasterClicked',
-                {
-                    userID: zyringUserID,
-                    type: 'requestHelp',
-                    timestamp: Date()
-                }
-        );
-    }
-    </script>
 
     <!-- Add your site or application content here -->
     <div class="header">
@@ -62,7 +35,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a id="zyringToaster"  class="navbar-brand" onclick="dismissToaster()" >AD</a>
+            <a id="zyringToaster"  class="navbar-brand" >AD</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">

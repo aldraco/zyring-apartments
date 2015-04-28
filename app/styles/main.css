@@ -2,13 +2,14 @@ body {
   font-family: 'Lato', sans-serif;
 }
 .behind-map {
-  background-color: #222;
+  background-color: #344;
   position: absolute;
   height:540px;
   width:100%;
   left: 0;
   top: 50px;
   color: white;
+  box-shadow: 0 -5px 2px teal;
 }
 
 .behind-map p {
