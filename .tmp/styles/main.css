@@ -5,7 +5,6 @@ body {
 
 .navbar-inverse {
   border-radius: 0;
-  color: white;
 }
 .behind-map {
   background-color: #5A5A5A;
@@ -110,7 +109,7 @@ img.apartment-listing-thumbnail {
 
 @media (max-width: 1200px) {
   .apartment-details {
-    font-size: .9em;
+    font-size: 1.2em;
     width: 75%;
   }
 }

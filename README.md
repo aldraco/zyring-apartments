@@ -1,10 +1,9 @@
-# Zyring
+# Zyring Apartments Project
 
-Welcome to zyring. 
-This is the boilerplate code you will be using to develope your app.
+This project is live!
 
-## Running your app
+http://aldraco-apartments.s3-website-us-west-2.amazonaws.com/#/
 
-Run `grunt` for building and `grunt serve` for preview.
+The goal of the project was to gain confidence and skill with Angular. I would highly recommend using Zyring's projects if you are trying to learn Angular. 
 
-In case you have any questions use the website to get in touch with us.
+(I also see a few future projects that mention React, which is cool.)
