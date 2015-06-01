@@ -9,35 +9,41 @@
 		
 	</div>
 
-	<h3><a ng-href="">{{aptInfo.street}} <br>{{aptInfo.city}} {{aptInfo.region}} {{aptInfo.zipcode}}</a></h3>
+	<h3>{{aptInfo.street}} <br>{{aptInfo.city}} {{aptInfo.region}} {{aptInfo.zipcode}}</h3>
 
 	<h4>Contact: {{aptInfo.contact}}</h4>
 	<div class="">
 		<p>{{aptInfo.description}}</p>	
 	</div>	
 
-	<h4 ng-click="showFeatures = (!showFeatures)">Features</h4>
+	<h4 ng-click="showFeatures = (!showFeatures)" class="features-header" id="features">Features</h4>
 	<div ng-show="showFeatures">
-		<ul>
+		<ul class='features-list'>
 			<li ng-repeat="feature in aptInfo.features">{{feature}}</li>
 		</ul>
 	</div>
 
 
-	<h4 ng-click="showSpecial = (!showSpecial)">Special Features</h4>
-	<ul ng-show="showSpecial">
-		<li ng-repeat="feature in aptInfo.specialFeatures">{{feature}}</li>
-	</ul>
+	<h4 ng-click="showSpecial = (!showSpecial)" class="features-header" id="special-features">Special Features</h4>
+  <div ng-show="showSpecial">
+  	<ul class='features-list'>
+  		<li ng-repeat="feature in aptInfo.specialFeatures">{{feature}}</li>
+  	</ul>
+  </div>
 	
-	<h4 ng-click="showCommunity = (!showCommunity)">Community Features</h4>
-	<ul ng-show="showCommunity">
-		<li ng-repeat="commFeature in aptInfo.communityFeatures">{{commFeature}}</li>
-	</ul>
+	<h4 ng-click="showCommunity = (!showCommunity)" class="features-header" id="community-features">Community Features</h4>
+  <div ng-show="showCommunity">
+  	<ul class='features-list'>
+  		<li ng-repeat="commFeature in aptInfo.communityFeatures">{{commFeature}}</li>
+  	</ul>
+  </div>
 
-	<h4 ng-click="showAmenities = (!showAmenities)">Amenities</h4>
-	<ul ng-show="showAmenities">
-		<li ng-repeat="amenity in aptInfo.amenities track by $index">{{amenity}}</li>
-	</ul>
+	<h4 ng-click="showAmenities = (!showAmenities)" class="features-header" id="features-amenities">Amenities</h4>
+  <div ng-show="showAmenities">
+  	<ul class='features-list'>
+  		<li ng-repeat="amenity in aptInfo.amenities track by $index">{{amenity}}</li>
+  	</ul>
+  </div>
 
 	
 	

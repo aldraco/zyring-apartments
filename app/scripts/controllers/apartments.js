@@ -63,6 +63,7 @@ angular.module('zyringApp')
 	.controller('SingleAptCtrl', ['$scope', '$routeParams', 'SingleAptFactory', function($scope, $routeParams, $SingleAptFactory) {
 		$scope.apartment_id = $routeParams.apartment_id;
 		$scope.aptInfo;
+    $scope.showFeatures = true;
 		$SingleAptFactory.get({apartment_id: $scope.apartment_id}, function(apt) {
 			$scope.aptInfo = apt;
 		});

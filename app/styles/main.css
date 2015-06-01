@@ -97,10 +97,49 @@ img.apartment-listing-thumbnail {
 	min-height: 600px;
 }
 
-.pin-thumbnail {
+.single-apartment p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin: 30px 0;
+}
+
+.single-apartment .features-header {
+  color: #24635B;
+  font-size: 1.4em;
+  line-height: 2em;
+  border-left: 3px solid blue;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+
+#special-features.features-header {
+  border-left-color: red;
+}
+
+#community-features.features-header {
+  border-left-color: orange;
+}
+
+#features-amenities.features-header {
+  border-left-color: green;
+}
+
+.single-apartment .features-list li {
+  line-height: 1.8em;
+  font-size: 1.3em;
+  list-style: none;
+}
+
+.pin-thumbnail img {
 	max-height: 170px;
 	padding: 10px;
 	margin: 0 auto;
+}
+
+.pin-thumbnail {
+  color: #222;
+  word-wrap: normal;
 }
 
 
@@ -116,9 +155,9 @@ img.apartment-listing-thumbnail {
 
 @media (max-width: 768px) {
 	.apartment-details {
-		top: 55%;
+		top: 40%;
 		line-height: 1.6em;
-		font-size: 24px;
+		font-size: 1.2em;
 		height: 20%;
 	}
 
@@ -136,7 +175,8 @@ img.apartment-listing-thumbnail {
     height: 25%;
     line-height: 1.4em;
     width:75%;
-    top: 40%;
+    top: 30%;
+    font-size:1.2em;
   }
 
   .apartment-listing h1 {
