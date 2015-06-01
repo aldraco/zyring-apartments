@@ -3,6 +3,21 @@ body {
   background-color: rgba(245, 245, 245, 1);
 }
 
+#profile-headshot {
+  border: 2px solid white;
+  box-shadow: 0 0 2px gray;
+  padding: 5px;
+  border-radius: 5px;
+  max-height: 400px;
+  float: right;
+  margin-left: 15%;
+}
+
+.profile-page {
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
 .navbar-inverse {
   border-radius: 0;
 }
@@ -180,8 +195,11 @@ img.apartment-listing-thumbnail {
   }
 
   .apartment-listing h1 {
-    font-size: 6em;
+    font-size: 5em;
   }
-}
 
-@media (max-width: )
+  .behind-map .pagination ul {
+    font-size: 12px;
+  }
+
+}

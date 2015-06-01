@@ -5,7 +5,7 @@ angular.module('zyringApp')
 		//$rootScope.activeTab = $rootScope.tabs[]
 
 		$rootScope.tabs = [
-			{link: '', name: 'Apartments'},
+			{link: '', name: 'Find an Apartment'},
 			{link: 'about', name: 'About Project'},
 			{link: 'contact', name: 'About Me'}
 			];
